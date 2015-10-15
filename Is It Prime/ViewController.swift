@@ -22,7 +22,7 @@ class ViewController: UIViewController {
             for var i = 2; i < input; i++ {
                 if input % i == 0 {
                     isPrime = false
-                } 
+                }
                 
             }
         } else if input == 2 {
