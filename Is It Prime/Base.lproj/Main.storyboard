@@ -15,12 +15,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is It Prime?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hl-UF-znr">
+                                <rect key="frame" x="149" y="20" width="303" height="66"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="7Uk-Qt-eUP"/>
+                                    <constraint firstAttribute="width" constant="303" id="yL8-d9-ZQp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="41"/>
+                                <color key="textColor" red="0.21386134624481201" green="0.88181596994400024" blue="0.14372649788856506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a number to know if it's prime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Doo-Jl-Jx4">
+                                <rect key="frame" x="20" y="121" width="560" height="39"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="2DQ-7v-lek"/>
+                                    <constraint firstAttribute="width" constant="560" id="eqc-YD-tbD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBq-qn-Vej">
+                                <rect key="frame" x="198" y="168" width="204" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="apo-5I-nAH"/>
+                                    <constraint firstAttribute="width" constant="204" id="txo-e0-lYX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d65-1n-fkb">
+                                <rect key="frame" x="232" y="244" width="137" height="61"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="OvF-oQ-qaS"/>
+                                    <constraint firstAttribute="width" constant="137" id="rE1-jH-vPK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="36"/>
+                                <color key="textColor" red="0.16857078671455383" green="0.72428041696548462" blue="0.16156294941902161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMm-dm-sIN">
+                                <rect key="frame" x="249" y="206" width="103" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pdf-X8-La0"/>
+                                    <constraint firstAttribute="width" constant="103" id="xBt-Na-oJn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="22"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.21386134624481201" green="0.88181596994400024" blue="0.14372649788856506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submit_Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q3p-M3-eVC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CMm-dm-sIN" firstAttribute="top" secondItem="QBq-qn-Vej" secondAttribute="bottom" constant="8" id="0Wv-ei-h7f"/>
+                            <constraint firstItem="Doo-Jl-Jx4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="76b-MI-YwO"/>
+                            <constraint firstItem="5Hl-UF-znr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7ZB-gV-cHb"/>
+                            <constraint firstItem="5Hl-UF-znr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GpP-Um-bOH"/>
+                            <constraint firstItem="d65-1n-fkb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OiZ-vh-I0K"/>
+                            <constraint firstItem="CMm-dm-sIN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ot1-CS-Tqr"/>
+                            <constraint firstItem="Doo-Jl-Jx4" firstAttribute="top" secondItem="5Hl-UF-znr" secondAttribute="bottom" constant="35" id="cdw-qV-L8B"/>
+                            <constraint firstItem="QBq-qn-Vej" firstAttribute="top" secondItem="Doo-Jl-Jx4" secondAttribute="bottom" constant="8" id="irm-05-10h"/>
+                            <constraint firstItem="d65-1n-fkb" firstAttribute="top" secondItem="CMm-dm-sIN" secondAttribute="bottom" constant="8" id="vUp-49-LK0"/>
+                            <constraint firstItem="QBq-qn-Vej" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xJM-MX-exx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answer_Label" destination="d65-1n-fkb" id="MPd-by-A4C"/>
+                        <outlet property="input_TextField" destination="QBq-qn-Vej" id="FXT-8F-C1d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="313"/>
         </scene>
     </scenes>
 </document>
