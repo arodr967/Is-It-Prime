@@ -15,28 +15,34 @@ class ViewController: UIViewController {
     
     @IBAction func submit_Button(sender: AnyObject) {
         
-        var isPrime = true
-        let input = Int (input_TextField.text!)!
+        //Setting this as an if statement, will prevent a crash
+        //when the input from the user is empty
         
-        if input > 2 {
-            for var i = 2; i < input; i++ {
-                if input % i == 0 {
-                    isPrime = false
-                }
+        if let input = Int (input_TextField.text!) {
+            var isPrime = true
+            if input > 2 {
+                for var i = 2; i < input; i++ {
+                    if input % i == 0 {
+                        isPrime = false
+                    }
                 
+                }
+            } else if input == 2 {
+                isPrime = true
+            } else {
+                isPrime = false
             }
-        } else if input == 2 {
-            isPrime = true
-        } else {
-            isPrime = false
-        }
         
-        print(isPrime)
+            print(isPrime)
         
-        if isPrime {
-            answer_Label.text = "Yes!"
-        } else {
-            answer_Label.text = "Nope!"
+            if isPrime {
+                answer_Label.text = "\(input) is prime!"
+            } else {
+                answer_Label.text = "\(input) is not prime."
+            }
+        } else { //otherwise, it will not execute
+                 //and tell user to please enter a number
+            answer_Label.text = "Please enter a number."
         }
         
     }
